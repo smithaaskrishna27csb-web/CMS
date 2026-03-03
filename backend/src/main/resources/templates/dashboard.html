@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>ConfHub</h2>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/submit-paper">Submit Paper</a>
+    <a href="/submission-history">My Submissions</a>
+    <a href="/register-conference">Register Conference</a>
+    <a href="/my-registrations">My Registrations</a>
+    <a href="/payment">Payments</a>
+    <a href="/profile">Profile</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+    <h1 style="margin-bottom:30px;">Welcome, {{username}}</h1>
+
+    <!-- SUMMARY CARDS -->
+    <div style="display:flex; gap:20px; flex-wrap:wrap;">
+
+        <div class="card" style="flex:1; min-width:220px;">
+            <h3>Total Submissions</h3>
+            <h1>{{totalSubmissions}}</h1>
+        </div>
+
+        <div class="card" style="flex:1; min-width:220px;">
+            <h3>Accepted Papers</h3>
+            <h1>{{acceptedCount}}</h1>
+        </div>
+
+        <div class="card" style="flex:1; min-width:220px;">
+            <h3>Registered Conferences</h3>
+            <h1>{{registrationCount}}</h1>
+        </div>
+
+        <div class="card" style="flex:1; min-width:220px;">
+            <h3>Total Payments</h3>
+            <h1>₹ {{totalPayments}}</h1>
+        </div>
+
+    </div>
+
+    <!-- RECENT SUBMISSIONS -->
+    <div class="card">
+        <h2>Recent Submissions</h2>
+
+        <table class="table">
+            <tr>
+                <th>Title</th>
+                <th>Status</th>
+                <th>Date</th>
+            </tr>
+
+            <!-- Backend Loop Placeholder -->
+            <tr>
+                <td>{{paperTitle}}</td>
+                <td><span class="status submitted">Submitted</span></td>
+                <td>{{submissionDate}}</td>
+            </tr>
+
+            <tr>
+                <td>AI & ML Research</td>
+                <td><span class="status accepted">Accepted</span></td>
+                <td>2026-03-21</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <!-- RECENT PAYMENTS -->
+    <div class="card">
+        <h2>Recent Payments</h2>
+
+        <table class="table">
+            <tr>
+                <th>Amount</th>
+                <th>Method</th>
+                <th>Status</th>
+                <th>Date</th>
+            </tr>
+
+            <tr>
+                <td>₹ 5000</td>
+                <td>UPI</td>
+                <td><span class="status paid">Paid</span></td>
+                <td>2026-04-01</td>
+            </tr>
+
+            <tr>
+                <td>₹ 3000</td>
+                <td>Card</td>
+                <td><span class="status pending">Pending</span></td>
+                <td>2026-04-03</td>
+            </tr>
+
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>

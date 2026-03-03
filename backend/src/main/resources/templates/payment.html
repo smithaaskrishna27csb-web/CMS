@@ -1,0 +1,33 @@
+<div class="sidebar">
+    <h2>ConfHub</h2>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/submit-paper">Submit Paper</a>
+    <a href="/submission-history">My Submissions</a>
+    <a href="/register-conference">Register Conference</a>
+    <a href="/my-registrations">My Registrations</a>
+    <a href="/payment">Payments</a>
+    <a href="/profile">Profile</a>
+</div>
+
+
+<div class="main">
+<div class="card">
+<h2>Make Payment</h2>
+
+<form action="/pay" method="post">
+
+<label>Amount</label>
+<input type="number" name="amount">
+
+<label>Payment Method</label>
+<select name="method">
+<option>Card</option>
+<option>UPI</option>
+<option>Net Banking</option>
+<option>Cash</option>
+</select>
+
+<button type="submit">Pay Now</button>
+</form>
+</div>
+</div>

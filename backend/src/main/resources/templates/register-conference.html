@@ -1,0 +1,33 @@
+<div class="sidebar">
+    <h2>ConfHub</h2>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/submit-paper">Submit Paper</a>
+    <a href="/submission-history">My Submissions</a>
+    <a href="/register-conference">Register Conference</a>
+    <a href="/my-registrations">My Registrations</a>
+    <a href="/payment">Payments</a>
+    <a href="/profile">Profile</a>
+</div>
+
+
+<div class="main">
+<div class="card">
+<h2>Register Conference</h2>
+
+<form action="/register" method="post">
+<label>Conference Name</label>
+<input type="text" name="conferenceName">
+
+<label>Registration Date</label>
+<input type="date" name="registrationDate">
+
+<label>Payment Status</label>
+<select name="paymentStatus">
+<option>Pending</option>
+<option>Paid</option>
+</select>
+
+<button type="submit">Register</button>
+</form>
+</div>
+</div>
